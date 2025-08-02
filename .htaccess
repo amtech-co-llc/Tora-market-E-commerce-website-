@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect clean URLs like /something to voir-plus.php?marque=something
+RewriteRule ^([a-zA-Z0-9-]+)$ voir-plus.php?marque=$1 [L]
+
+# Permanently redirect .html to .php (e.g., about.html → about.php)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.html$ $1.php [R=301,L]
