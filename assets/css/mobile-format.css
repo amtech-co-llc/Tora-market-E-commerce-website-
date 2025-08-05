@@ -21,6 +21,15 @@
         display: flex;
         gap: 0.6em;
         max-width: 100%;
+        width: 100%;
+        padding-top: 0.4em;
+        overflow-x: scroll;
+    }
+
+    .other-filters .input-filters {
+        display: flex;
+        gap: 0.6em;
+        max-width: 100%;
         padding-top: 0.4em;
         overflow-x: scroll;
     }
@@ -460,6 +469,15 @@
     }
 
     .other-filters .fiter-by-mark {
+        display: flex;
+        gap: 0.6em;
+        max-width: 100%;
+        width: 100%;
+        padding-top: 0.4em;
+        overflow-x: scroll;
+    }
+
+    .other-filters .input-filters {
         display: flex;
         gap: 0.6em;
         max-width: 100%;

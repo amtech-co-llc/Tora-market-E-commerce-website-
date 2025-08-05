@@ -232,6 +232,8 @@ if (count($res) > 0) {
                                     </select>
                                     <?php
                                     if (isset($_SESSION['user_unique_id_session']) || isset($_COOKIE['user_unique_id_session'])) {
+                                        echo '<a href="./profile.php"><img src="./assets/avatar/user_icon_male.png"
+                                                style="width: 30px; height: 30px; border-radius: 50%;" alt=""></a>';
                                         echo '<a href="./php/logout.php"><button><i class="ri-logout-circle-line"></i> Se déconneter</button></a>';
                                     } else {
                                         echo '<a href="./login.php"><button><i class="ri-user-shared-line"></i> Se

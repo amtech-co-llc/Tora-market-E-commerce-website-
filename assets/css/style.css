@@ -1969,38 +1969,112 @@ select[type="rating"] {
   position: sticky;
   justify-content: center;
   align-items: center;
-/*   border-bottom: 1px solid var(--border); */
+  /*   border-bottom: 1px solid var(--border); */
   top: 9em;
   z-index: 900;
   background-color: var(--while);
-  padding: 1em 1em 0.3em 1em;
+  padding: 0.3em 1em 0.3em 1em;
   width: 100%;
 }
 
 .other-filters .fiter-by-mark {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 0.6em;
   max-width: 100%;
+  width: 90%;
   padding-top: 0.4em;
   overflow: auto;
+  justify-content: space-between;
+}
+
+.other-filters .fiter-by-mark a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--black);
 }
 
 .other-filters .fiter-by-mark a img {
-  border: 1px solid var(--border);
-  width: 50px;
-  height: 50px;
+  border: 2px solid var(--primary-color);
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
+  padding: 0.5em;
 }
 
 .other-filters .input-filters {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.2em;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--while);
-  width: 100%;
+  gap: 0.6em;
+  max-width: 100%;
+  padding-top: 0.4em;
+  overflow: auto;
+  padding-bottom: 0.3em;
 }
+
+.other-filters .input-filters .filter-by-price {
+  display: flex;
+  gap: 0.2em;
+}
+
+
+
+/* beginning of filter by price */
+
+/* WebKit (Chrome, Safari, Edge) */
+.other-filters .input-filters::-webkit-scrollbar {
+  height: 6px;
+}
+
+.other-filters .input-filters::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.other-filters .input-filters::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.other-filters .input-filters::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+
+
+/* WebKit (Chrome, Safari, Edge) */
+.other-filters .fiter-by-mark::-webkit-scrollbar {
+  height: 6px;
+}
+
+.other-filters .fiter-by-mark::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.other-filters .fiter-by-mark::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.other-filters .fiter-by-mark::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+
+
+/* end of filter by price */
+
+
+
+
+
+
+
+
 
 .other-filters .input-filters select {
   border: 1px solid var(--border);

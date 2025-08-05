@@ -3,23 +3,9 @@ session_start();
 require_once("./php/config.php");
 require_once("./php/view_format.php");
 
-if (!isset($_SESSION['user_unique_id_session']) && !isset($_COOKIE['user_unique_id_session'])) {
-    header("Location: ./");
-    exit();
-}
-
-$user_select = "SELECT * FROM user_accounts WHERE user_unique_id = ? OR user_unique_id = ?";
-$query_select = $pdo->prepare($user_select);
-$query_select->execute([$_SESSION['user_unique_id_session'], $_COOKIE['user_unique_id_session']]);
-$result_select = $query_select->fetch(PDO::FETCH_ASSOC);
-
-if (($result_select['user_category'] == "none" && $result_select['contact_phone'] == "0") || ($result_select['user_category'] == "none" || $result_select['contact_phone'] == "0")) {
-    header("Location: account-details.php");
-}
-
-// If at least one is set, stay on the page
-
 $viewF = new viewFormat();
+$sous_categorie = htmlspecialchars($_GET['sous-categorie']);
+$marque = htmlspecialchars($_GET['marque']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +13,7 @@ $viewF = new viewFormat();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tora Corporation</title>
+    <title>Résultat de Catégories</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/mobile-format.css">
@@ -35,6 +21,7 @@ $viewF = new viewFormat();
 
     <!-- Essential SEO Meta Tags -->
     <meta name="description" content="Vendez vos produits avec toute sécurité et prix abordable">
+    <meta name="keywords" content="Vente, Achat, Tora Corporation">
     <meta name="author" content="Tora Corporation">
     <meta name="robots" content="noindex, nofollow">
 
@@ -55,7 +42,8 @@ $viewF = new viewFormat();
     <meta name="twitter:creator" content="@YourTwitterHandle">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
 
 </head>
 
@@ -75,19 +63,7 @@ $viewF = new viewFormat();
                     <a href="./">
                         <h3>Tora Corporation</h3>
                     </a>
-                    <!-- <div class="nav-cont">
-            <ul>
-              <a href="#">
-                <li>Acceuil</li>
-              </a>
-              <a href="#">
-                <li>Vendre un produit</li>
-              </a>
-              <a href="#">
-                <li>Aide</li>
-              </a>
-            </ul>
-          </div> -->
+
                     <div class="nav-right-bot">
                         <div class="contents-right-nav">
                             <div class="search">
@@ -195,14 +171,12 @@ $viewF = new viewFormat();
                                 $res_acc = $query_acc->fetch(PDO::FETCH_ASSOC);
 
                                 if ($res_acc['user_category'] == "vendeur" || $res_acc['user_category'] == "entreprise") {
-                                    echo '<a href="./publication.php"><button id="buttons"><i class="ri-add-large-fill"></i> Vendre un
-                                    produit </button></a>';
+                                    echo '<a href="./publication.php"><button id="buttons"><i class="ri-add-large-fill"></i> Vendre un produit</button></a>';
                                 } else {
                                     echo "";
                                 }
                             } else {
-                                echo '<a href="./login.php"><button id="buttons"><i class="ri-add-large-fill"></i> Vendre un
-                                    produit</button></a>';
+                                echo '<a href="./login.php"><button id="buttons"><i class="ri-add-large-fill"></i> Vendre un produit</button></a>';
                             }
                             ?>
                         </div>
@@ -212,10 +186,16 @@ $viewF = new viewFormat();
                             <option value="fr">Français</option>
                             <option value="en">Anglais</option>
                         </select>
-                        <a href="./profile.php"><img src="./assets/avatar/user_icon_male.png"
-                                style="width: 30px; height: 30px; border-radius: 50%;" alt="">
-                        </a>
-                        <a href="./php/logout.php"><button><i class="ri-logout-circle-line"></i> Se déconneter</button></a>
+                        <?php
+                        if (isset($_SESSION['user_unique_id_session']) || isset($_COOKIE['user_unique_id_session'])) {
+                            echo '<a href="./profile.php"><img src="./assets/avatar/user_icon_male.png"
+                                    style="width: 30px; height: 30px; border-radius: 50%;" alt=""></a>';
+                            echo '<a href="./php/logout.php"><button><i class="ri-logout-circle-line"></i> Se déconneter</button></a>';
+                        } else {
+                            echo '<a href="./login.php"><button><i class="ri-user-shared-line"></i> Se
+                                            connecter</button></a>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -228,7 +208,7 @@ $viewF = new viewFormat();
             </a>
             <div class="search">
                 <div class="search-first-box">
-                    <input type="text" placeholder="Filtrer par nom..." class="searchInput2" id="searchInput2">
+                    <input type="text" placeholder="Filtrer par nom..." id="searchInput2">
                 </div>
                 <!-- <span class="search-icon"><i class="ri-search-line"></i></span> -->
                 <!-- beginning of search-results -->
@@ -253,27 +233,11 @@ $viewF = new viewFormat();
                                 Notifications
                             </li>
                         </a>
-                        <?php
-                        if (isset($_SESSION['user_unique_id_session']) || isset($_COOKIE['user_unique_id_session'])) {
-
-                            $sql_acc = "SELECT * FROM user_accounts WHERE user_unique_id = ? OR user_unique_id = ?";
-                            $query_acc = $pdo->prepare($sql_acc);
-                            $query_acc->execute([$_SESSION['user_unique_id_session'], $_COOKIE['user_unique_id_session']]);
-                            $res_acc = $query_acc->fetch(PDO::FETCH_ASSOC);
-
-                            if ($res_acc['user_category'] == "vendeur" || $res_acc['user_category'] == "entreprise") {
-                                echo '<a href="./publication.php"><button id="buttons"><i class="ri-add-large-fill"></i> Vendre un
-                                    produit </button></a>';
-                            } else {
-                                echo "";
-                            }
-                        } else {
-                            echo '<a href="./login.php"><button id="buttons"><i class="ri-add-large-fill"></i> Vendre un
-                                    produit</button></a>';
-                        }
-                        ?>
-                        <a href="./php/logout.php">
-                            <li>Se déconnecter</li>
+                        <a href="#">
+                            <li>Vendre un produit</li>
+                        </a>
+                        <a href="./sign-up.php">
+                            <li>Créer un compte</li>
                         </a>
                     </ul>
                     <select name="" id="" class="mobile-language-chooser">
@@ -349,8 +313,8 @@ $viewF = new viewFormat();
         <!--  end of mobile navigation -->
         <!--  ====================================================================================== -->
         <!-- end of navigation bar -->
-        <div class="body-contents">
-            <div class="body-contents-details">
+        <div class="body-contents-2">
+            <div class="body-contents-details"><br>
                 <h2>Tous les catégories</h2>
                 <!-- categorie list -->
                 <div class="categories-list">
@@ -488,45 +452,70 @@ $viewF = new viewFormat();
                     </a>
                     <!-- end of list1 -->
                 </div>
-                <!-- end of categorie list -->
-                <!-- beginning of carousel -->
-                <div class="story-wrapper">
-                    <div class="scroll-controls">
-                        <button class="scroll-btn left"><i class="ri-arrow-left-s-line"></i></button>
-                        <button class="scroll-btn right"><i class="ri-arrow-right-s-line"></i></button>
-                    </div>
-                    <div class="fade-left"></div>
-                    <div class="fade-right"></div>
-                    <!-- beginning of story cards -->
-                    <div class="story-bar" id="storyBar">
+                <div class="other-filters">
+                    <div class="fiter-by-mark">
                         <?php
-                        $sql_image = "SELECT * FROM imagess ORDER BY RAND() DESC";
-                        $query_image = $pdo->prepare($sql_image);
-                        $query_image->execute();
-                        $res_image = $query_image->fetchAll(PDO::FETCH_ASSOC);
-                        if (count($res_image) > 0) {
-                            foreach ($res_image as $row_image) {
+                        $marque = isset($_GET['marque']) ? htmlspecialchars($_GET['marque']) : '';
+
+                        $sql_marque = "SELECT * FROM marque WHERE `sous-categorie` = ?";
+                        $query_marque = $pdo->prepare($sql_marque);
+                        $query_marque->execute([$sous_categorie]);
+                        $res_marque = $query_marque->fetchAll(PDO::FETCH_ASSOC);
+
+                        if (count($res_marque) > 0) {
+                            foreach ($res_marque as $row_marque) {
+                                // Skip the marque if it matches the one in the GET parameter
+                                if (strcasecmp($row_marque['nom'], $marque) === 0) {
+                                    continue;
+                                }
                         ?>
-                                <div class="story-card">
-                                    <a href="./<?php echo $row_image['seo_link'] ?>"><img src="<?php echo "./" . $row_image['image_link']; ?>"></a>
-                                </div>
+                                <a href="./resultat-par-marque.php?sous-categorie=<?php echo urlencode($sous_categorie); ?>&marque=<?php echo urlencode($row_marque['nom']); ?>">
+                                    <img src="./tora icons/<?php echo htmlspecialchars($row_marque['nom']); ?>.png" alt="">
+                                    <?php echo htmlspecialchars($row_marque['nom']); ?>
+                                </a>
                         <?php
                             }
                         }
                         ?>
 
                     </div>
-                    <!-- end of story cards -->
+
+                    <!-- beginning of filter by price, location, currency and state -->
+                    <div class="input-filters">
+                        <form action="#" id="filterFormAll" style="display: flex; gap:0.4em;">
+                            <input type="text" id="filterLocation" placeholder="Entrer une localisation">
+                            <div class="filter-by-price">
+                                <div class="price-input-f" style="display: flex;">
+                                    <input type="number" id="filterPriceMin" placeholder="Prix min" style="width: 85px; border-radius: 8px 0px 0px 8px;">
+                                    <input type="number" id="filterPriceMax" placeholder="Prix max" style="width: 85px; border-left:none; border-radius: 0px 8px 8px 0px;">
+                                </div>
+                                <select name="" id="filterCurrency">
+                                    <option value="usd">USD</option>
+                                    <option value="cdf">CDF</option>
+                                </select>
+                            </div>
+                            <select name="" id="filterState">
+                                <option value="">Tout les produits</option>
+                                <option value="Nouveau Produit">Nouveaux produits</option>
+                                <option value="Utilisé">Produits Utilisés</option>
+                            </select>
+                            <input type="text" id="sous_categorie" value="<?php echo $sous_categorie; ?>" hidden>
+                            <input type="text" id="marque" value="<?php echo $marque; ?>" hidden>
+                        </form>
+                    </div>
+                    <!-- end of filter by price, location, currency and state -->
+
                 </div>
+                <br>
+                <!-- end of categorie list -->
                 <!-- end of carousel -->
                 <!-- ====================================================================================================== -->
                 <!-- beginning of cards -->
                 <div class="cards" id="card-container">
-
                     <?php
-                    $sql_prod = "SELECT * FROM produit ORDER BY (RAND() + IF(promotion = 'enabled', 0.4, 0)) DESC";
+                    $sql_prod = "SELECT * FROM produit WHERE sous_categorie = ? AND titre LIKE ? ORDER BY (RAND() + IF(promotion = 'enabled', 0.4, 0)) DESC";
                     $query_prod = $pdo->prepare($sql_prod);
-                    $query_prod->execute();
+                    $query_prod->execute([$sous_categorie, "%" . $marque . "%"]);
                     $res_prod = $query_prod->fetchAll(PDO::FETCH_ASSOC);
                     if (count($res_prod) > 0) {
                         foreach ($res_prod as $row_prod) {
@@ -538,8 +527,6 @@ $viewF = new viewFormat();
                                 foreach ($res_prod_image as $row_prod_image) {
                     ?>
                                     <!-- beginning of card1 -->
-                                    <!--    <a href="./voir-plus.php?id=<?php //echo $row_prod['unique_id'] 
-                                                                        ?>" style="text-decoration: none;color:#000;"> -->
                                     <div class="card1">
                                         <div class="image">
                                             <a href="./<?php echo $row_prod['seo_link'] ?>"><img src="<?php echo $row_prod_image['image_link'] ?>" alt=""></a>
@@ -700,6 +687,8 @@ $viewF = new viewFormat();
                                                 }
                                                 ?>
 
+
+
                                             </div>
                                             <?php
                                             if ($row_prod['promotion'] == "Enabled") {
@@ -723,7 +712,6 @@ $viewF = new viewFormat();
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- </a> -->
                                     <!-- end of card1 -->
                     <?php
                                 }
@@ -733,7 +721,6 @@ $viewF = new viewFormat();
                         echo "<h1 style='text-align:center;color:gray;'>Pas de produit disponible</h1>";
                     }
                     ?>
-
                 </div>
                 <!-- end of cards -->
                 <!-- ====================================================================================================== -->
@@ -817,28 +804,12 @@ $viewF = new viewFormat();
 
 
     <!-- beginning of scripting -->
-    <script src="./assets/js/recherche.js" defer></script>
     <script src="./assets/js/pagination.js"></script>
+    <script src="./ajax/filter-by-2.js"></script>
     <script src="./assets/js/menu.js"></script>
     <script>
         const storyBar = document.getElementById('storyBar');
         const scrollAmount = 120;
-
-        document.querySelector('.scroll-btn.left').addEventListener('click', () => {
-            storyBar.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        document.querySelector('.scroll-btn.right').addEventListener('click', () => {
-            storyBar.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-
 
 
         document.getElementById('searchInput').addEventListener('input', () => {
@@ -863,10 +834,8 @@ $viewF = new viewFormat();
 
         document.getElementById('searchInput2').addEventListener('input', () => {
             const input2 = document.getElementById('searchInput2').value;
-
             if (input2.length > 0) {
                 document.querySelector('.search-results2').classList.add('show');
-                document.querySelector('.categories-list').style.position = 'static';
 
                 const xhr1 = new XMLHttpRequest();
                 xhr1.open("GET", `php/recherche.php?prod=${input2}`, true);
@@ -880,9 +849,10 @@ $viewF = new viewFormat();
 
             } else {
                 document.querySelector('.search-results2').classList.remove('show');
-                document.querySelector('.categories-list').style.position = 'sticky';
             }
         });
+
+
     </script>
 </body>
 

@@ -63,7 +63,7 @@ if (($result_select['user_category'] == "none" && $result_select['contact_phone'
                 <a href="./">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./php/logout.php"><button id="buttons" style="font-size: 14px;"><i class="ri-logout-circle-line"></i> Se déconneter</button></a>
             </div>
         </div>
         <!-- end of navigation bar -->

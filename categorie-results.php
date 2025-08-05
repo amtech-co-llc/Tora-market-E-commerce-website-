@@ -187,6 +187,8 @@ $sous_categorie = htmlspecialchars($_GET['sous-categorie']);
                         </select>
                         <?php
                         if (isset($_SESSION['user_unique_id_session']) || isset($_COOKIE['user_unique_id_session'])) {
+                            echo '<a href="./profile.php"><img src="./assets/avatar/user_icon_male.png"
+                                    style="width: 30px; height: 30px; border-radius: 50%;" alt=""></a>';
                             echo '<a href="./php/logout.php"><button><i class="ri-logout-circle-line"></i> Se déconneter</button></a>';
                         } else {
                             echo '<a href="./login.php"><button><i class="ri-user-shared-line"></i> Se
@@ -311,7 +313,8 @@ $sous_categorie = htmlspecialchars($_GET['sous-categorie']);
         <!--  ====================================================================================== -->
         <!-- end of navigation bar -->
         <div class="body-contents-2">
-            <div class="body-contents-details">
+            <div class="body-contents-details"><br>
+                <h2>Tous les catégories</h2>
                 <!-- categorie list -->
                 <div class="categories-list">
                     <!-- beginning of list1 -->
@@ -449,32 +452,48 @@ $sous_categorie = htmlspecialchars($_GET['sous-categorie']);
                     <!-- end of list1 -->
                 </div>
                 <div class="other-filters">
-                    <div class="input-filters">
-                        <input type="text" placeholder="Entrer une localisation">
-                        <div class="filter-by-price">
-                            <input type="number" placeholder="Entrer un prix">
-                            <select name="" id="">
-                                <option value="usd">USD</option>
-                                <option value="cdf">CDF</option>
-                            </select>
-                        </div>
-                        <select name="" id="">
-                            <option value="">Tout les produits</option>
-                            <option value="">Nouveaux produits</option>
-                            <option value="">Produits Utilisés</option>
-                        </select>
-                    </div>
                     <div class="fiter-by-mark">
-                        <a href=""><img src="./tora icons/samsung.png" alt=""></a>
-                        <a href=""><img src="./tora icons/samsung.png" alt=""></a>
-                        <a href=""><img src="./tora icons/samsung.png" alt=""></a>
-                        <a href=""><img src="./tora icons/samsung.png" alt=""></a>
-                        <a href=""><img src="./tora icons/samsung.png" alt=""></a>
-                        <a href=""><img src="./tora icons/samsung.png" alt=""></a>
-                        <a href=""><img src="./tora icons/samsung.png" alt=""></a>
-                        <a href=""><img src="./tora icons/samsung.png" alt=""></a>
+                        <?php
+                        $sql_marque = "SELECT * FROM marque WHERE `sous-categorie` = ?";
+                        $query_marque = $pdo->prepare($sql_marque);
+                        $query_marque->execute([$sous_categorie]);
+                        $res_marque = $query_marque->fetchAll(PDO::FETCH_ASSOC);
+                        if (count($res_marque) > 0) {
+                            foreach ($res_marque as $row_marque) {
+                        ?>
+                                <a href="./resultat-par-marque.php?sous-categorie=<?php echo $sous_categorie ?>&marque=<?php echo $row_marque['nom']; ?>"><img src="./tora icons/<?php echo $row_marque['nom']; ?>.png" alt=""><?php echo $row_marque['nom']; ?></a>
+                        <?php
+                            }
+                        }
+                        ?>
                     </div>
-                </div><br>
+
+                    <!-- beginning of filter by price, location, currency and state -->
+                    <div class="input-filters">
+                        <form action="#" id="filterFormAll" style="display: flex; gap:0.4em;">
+                            <input type="text" id="filterLocation" placeholder="Entrer une localisation">
+                            <div class="filter-by-price">
+                                <div class="price-input-f" style="display: flex;">
+                                    <input type="number" id="filterPriceMin" placeholder="Prix min" style="width: 85px; border-radius: 8px 0px 0px 8px;">
+                                    <input type="number" id="filterPriceMax" placeholder="Prix max" style="width: 85px; border-left:none; border-radius: 0px 8px 8px 0px;">
+                                </div>
+                                <select name="" id="filterCurrency">
+                                    <option value="usd">USD</option>
+                                    <option value="cdf">CDF</option>
+                                </select>
+                            </div>
+                            <select name="" id="filterState">
+                                <option value="">Tout les produits</option>
+                                <option value="Nouveau Produit">Nouveaux produits</option>
+                                <option value="Utilisé">Produits Utilisés</option>
+                            </select>
+                            <input type="text" id="sous_categorie" value="<?php echo $sous_categorie; ?>" hidden>
+                        </form>
+                    </div>
+                    <!-- end of filter by price, location, currency and state -->
+
+                </div>
+                <br>
                 <!-- end of categorie list -->
                 <!-- end of carousel -->
                 <!-- ====================================================================================================== -->
@@ -773,6 +792,7 @@ $sous_categorie = htmlspecialchars($_GET['sous-categorie']);
 
     <!-- beginning of scripting -->
     <script src="./assets/js/pagination.js"></script>
+    <script src="./ajax/filter-by.js"></script>
     <script src="./assets/js/menu.js"></script>
     <script>
         const storyBar = document.getElementById('storyBar');
@@ -817,23 +837,6 @@ $sous_categorie = htmlspecialchars($_GET['sous-categorie']);
             } else {
                 document.querySelector('.search-results2').classList.remove('show');
             }
-        });
-
-
-
-
-        document.querySelector('.scroll-btn.left').addEventListener('click', () => {
-            storyBar.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        document.querySelector('.scroll-btn.right').addEventListener('click', () => {
-            storyBar.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
         });
     </script>
 </body>
