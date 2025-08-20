@@ -3,6 +3,10 @@ session_start();
 require_once("./php/config.php");
 require_once("./php/view_format.php");
 
+$user_unique_id = htmlspecialchars($_GET['unique_id']);
+$url = htmlspecialchars($_GET['url']);
+$fullUrl = $url;
+
 if (!isset($_SESSION['user_unique_id_session']) && !isset($_COOKIE['user_unique_id_session'])) {
     header("Location: ./");
     exit();
@@ -69,56 +73,22 @@ if (($result_select['user_category'] == "none" && $result_select['contact_phone'
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
+                <?php
+                $sql_user = "SELECT * FROM user_accounts WHERE user_unique_id = ?";
+                $query_user = $pdo->prepare($sql_user);
+                $query_user->execute([$user_unique_id]);
+                $res_user = $query_user->fetch();
+                ?>
                 <div class="conversation-profile">
-                    <a href="./chat.php" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="./chat.php" type="name" style="text-decoration: none;color: black;"><i class="ri-arrow-left-fill"></i></a>
                     <!--  <img src="./assets/images/image1.jpeg" alt=""> -->
                     <a href="#" type="name" style="text-decoration: none;color: black;">
-                        <h3>The name of profile</h3>
+                        <h3><?php echo $res_user['user_name']; ?></h3>
                     </a>
                 </div>
                 <!--  beginning of conversations -->
                 <div class="conversation-place" id="chat-container">
-                    <div class="msg me">
-                        <div class="conversation-box">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste perferendis nulla,
-                            labore numquam cumque culpa magnam illum deleniti repellat nemo odit, ipsam sequi natus
-                            impedit consectetur aliquam, in tenetur!
-                        </div>
-                    </div>
-                    <div class="msg other">
-                        <div class="conversation-box">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste perferendis nulla,
-                            labore numquam cumque culpa magnam illum deleniti repellat nemo odit, ipsam sequi natus
-                            impedit consectetur aliquam, in tenetur!
-                        </div>
-                    </div>
-                    <div class="msg me">
-                        <div class="conversation-box">
-                            Lorem ipsum dolor
-                        </div>
-                    </div>
-                    <div class="msg other">
-                        <div class="conversation-box">
-                            Lorem
-                        </div>
-                    </div>
-                    <div class="msg me">
-                        <div class="conversation-box">
-                            <a href="#" type="name"><img src="./assets/images/image1.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="msg other">
-                        <div class="conversation-box">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste perferendis nulla,
-                            labore numquam cumque culpa magnam illum deleniti repellat nemo odit, ipsam sequi natus
-                            impedit consectetur aliquam, in tenetur!
-                        </div>
-                    </div>
-                    <div class="msg me">
-                        <div class="conversation-box">
-                            Lorem ipsum dolor
-                        </div>
-                    </div>
+                    <!-- <p id="test"></p> -->
                 </div>
                 <!--  end of conversations -->
                 <!-- beginning of input fileds -->
@@ -126,12 +96,19 @@ if (($result_select['user_category'] == "none" && $result_select['contact_phone'
                     <div class="image-place">
                         <img src="./assets/images/image1.jpeg" class="imagePreview" alt="">
                     </div>
-                    <textarea name="" id="" placeholder="Ecrit un message..."></textarea>
-                    <div class="file">
-                        <input type="file" accept="image/*" id="select-file" hidden>
-                        <label for="select-file"><i class="ri-image-fill"></i></label>
-                    </div>
-                    <button><i class="ri-telegram-fill"></i></button>
+                    <form action="#" id="msgSentForm">
+                        <input type="text" name="sender_id" value="<?php echo $res_user['user_unique_id']; ?>" hidden>
+                        <?php if (!empty($fullUrl)) {
+                            echo '<textarea name="message" id="textA" placeholder="Ecrit un message...">' . $fullUrl . '</textarea>';
+                        } else {
+                            echo '<textarea name="message" id="textA" placeholder="Ecrit un message..."></textarea>';
+                        } ?>
+                        <div class="file">
+                            <input type="file" accept="image/*" name="sent_image" id="select-file" hidden>
+                            <label for="select-file"><i class="ri-image-fill"></i></label>
+                        </div>
+                        <button id="sendButton"><i class="ri-telegram-fill"></i></button>
+                    </form>
                 </div>
                 <!-- end of input fileds -->
             </div>
@@ -204,8 +181,28 @@ if (($result_select['user_category'] == "none" && $result_select['contact_phone'
             <br> Propulsé par <a href="https://www.amtech-co.com">Amtech technology (Amtech-co LLC | Software)</a>
         </p> -->
     </div>
+    <script>
+        document.getElementById("chat-container").addEventListener("click", (e) => {
+            const deleteBtn = e.target.closest(".quick-action");
+            if (deleteBtn) {
+                const messageId = deleteBtn.getAttribute("data-id");
+                /* alert("Deleting message ID: " + messageId); */
 
+                // Example AJAX request to delete message
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", "php/delete-message.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onload = () => {
+                    if (xhr.readyState == xhr.DONE && xhr.status == 200) {
+                        alert(xhr.response);
+                    }
+                };
+                xhr.send("id=" + messageId);
+            }
+        });
+    </script>
     <script src="./assets/js/conversation.js"></script>
+    <script src="./ajax/conversation.js"></script>
 </body>
 
 </html>

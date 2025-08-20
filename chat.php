@@ -73,228 +73,37 @@ if (($result_select['user_category'] == "none" && $result_select['contact_phone'
                     <a href="./" type="name"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">utilisateurs</h2>
                 </div>
-                <!-- beginning of user-card -->
-                <a href="./conversation.php">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name 1</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                        <span class="msg-number">20</span>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="./conversation.php">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                        <span class="msg-number">9</span>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="./conversation.php">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="./conversation.php">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
-                <!-- beginning of user-card -->
-                <a href="#">
-                    <div class="user-card">
-                        <img src="./assets/images/image1.jpeg" alt="">
-                        <div class="det-user">
-                            <h3>User Name 20</h3>
-                            <p>Last messsage in short...</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- end of user-card -->
+                <?php
+                $sql_acc = "SELECT * FROM user_accounts WHERE user_unique_id != ?";
+                $query_acc = $pdo->prepare($sql_acc);
+                $query_acc->execute([$_COOKIE['user_unique_id_session']]);
+                $res_acc = $query_acc->fetchAll(PDO::FETCH_ASSOC);
+                if (count($res_acc) > 0) {
+                    foreach ($res_acc as $row_acc) {
+                ?>
+                        <!-- beginning of user-card -->
+                        <a href="./conversation.php?unique_id=<?php echo $row_acc['user_unique_id']; ?>&url=" class="a-user">
+                            <div class="user-card">
+                                <?php
+                                if ($row_acc['user_image'] == './') {
+                                    echo "<img src='./assets/avatar/user_icon_male.png' alt=''>";
+                                } else {
+                                    echo "<img src='" . $row_acc['user_image'] . "' alt=''>";
+                                }
+                                ?>
+
+                                <div class="det-user">
+                                    <h3><?php echo $row_acc['user_name']; ?></h3>
+                                    <p>Last messsage in short...</p>
+                                </div>
+                                <span class="msg-number">20</span>
+                            </div>
+                        </a>
+                        <!-- end of user-card -->
+                <?php
+                    }
+                }
+                ?>
             </div>
         </div>
         <div class="mobile-navigation-bottom">

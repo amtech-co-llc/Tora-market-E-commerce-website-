@@ -9,6 +9,7 @@ $time = new passedTime();
 
 
 $unique_id = htmlspecialchars($_GET['marque']);
+$shareUrl = "Dis moi plus sur ça%20https://market.toracorporation.com/" . $unique_id;
 
 $sql = "SELECT * FROM produit WHERE seo_link = ?";
 $query = $pdo->prepare($sql);
@@ -93,7 +94,6 @@ if (count($res) > 0) {
 
                 <!-- Favicon -->
                 <link rel="icon" href="./favicon.ico" type="image/x-icon">
-
 
             </head>
 
@@ -206,6 +206,7 @@ if (count($res) > 0) {
                                         </div>
                                         <?php
                                         if (isset($_SESSION['user_unique_id_session']) || isset($_COOKIE['user_unique_id_session'])) {
+                                            $_SESSION['user_unique_id_session'] = $_COOKIE['user_unique_id_session'];
 
                                             $sql_acc = "SELECT * FROM user_accounts WHERE user_unique_id = ? OR user_unique_id = ?";
                                             $query_acc = $pdo->prepare($sql_acc);
@@ -232,6 +233,7 @@ if (count($res) > 0) {
                                     </select>
                                     <?php
                                     if (isset($_SESSION['user_unique_id_session']) || isset($_COOKIE['user_unique_id_session'])) {
+
                                         echo '<a href="./profile.php"><img src="./assets/avatar/user_icon_male.png"
                                                 style="width: 30px; height: 30px; border-radius: 50%;" alt=""></a>';
                                         echo '<a href="./php/logout.php"><button><i class="ri-logout-circle-line"></i> Se déconneter</button></a>';
@@ -453,7 +455,7 @@ if (count($res) > 0) {
                                         ?>
                                         <div class="contacts-v">
                                             <a href="#"><button><i class="ri-shield-flash-line"></i> Utiliser Tora express</button></a>
-                                            <a href="./conversation.php"><button><i class="ri-mail-add-line"></i></button></a>
+                                            <a href="./conversation.php?unique_id=<?php echo $row['user_unique_id']; ?>&url=<?php echo $shareUrl; ?>"><button><i class="ri-mail-add-line"></i></button></a>
                                             <a href="tel:+<?php echo $res_user['contact_phone']; ?>"><button><i class="ri-phone-fill"></i></button></a>
                                             <a href="https://wa.me/<?php echo $res_user['contact_phone']; ?>?text=Pouvez-vous me dire plus sur ce produit?%0Ahttps://toracorporation.com/<?php echo $row['seo_link'] ?>" rel="noopener noreferrer"><button><i class="ri-whatsapp-line"></i></button></a>
                                         </div>

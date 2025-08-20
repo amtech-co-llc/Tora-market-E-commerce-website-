@@ -187,7 +187,8 @@ $viewF = new viewFormat();
                                 </div>
                             </div>
                             <?php
-                            if (isset($_SESSION['user_unique_id_session']) || isset($_COOKIE['user_unique_id_session'])) {
+                            if (isset($_COOKIE['user_unique_id_session'])) {
+                                $_SESSION['user_unique_id_session'] = $_COOKIE['user_unique_id_session'];
 
                                 $sql_acc = "SELECT * FROM user_accounts WHERE user_unique_id = ? OR user_unique_id = ?";
                                 $query_acc = $pdo->prepare($sql_acc);
@@ -254,7 +255,7 @@ $viewF = new viewFormat();
                             </li>
                         </a>
                         <?php
-                        if (isset($_SESSION['user_unique_id_session']) || isset($_COOKIE['user_unique_id_session'])) {
+                        if (isset($_COOKIE['user_unique_id_session'])) {
 
                             $sql_acc = "SELECT * FROM user_accounts WHERE user_unique_id = ? OR user_unique_id = ?";
                             $query_acc = $pdo->prepare($sql_acc);
@@ -290,7 +291,7 @@ $viewF = new viewFormat();
                     <label for="">Acceuille</label>
                 </div>
                 <?php
-                if (isset($_SESSION['user_unique_id_session']) || isset($_COOKIE['user_unique_id_session'])) {
+                if (isset($_COOKIE['user_unique_id_session'])) {
                     $sql_acc = "SELECT * FROM user_accounts WHERE user_unique_id = ? OR user_unique_id = ?";
                     $query_acc = $pdo->prepare($sql_acc);
                     $query_acc->execute([$_SESSION['user_unique_id_session'], $_COOKIE['user_unique_id_session']]);
@@ -315,7 +316,7 @@ $viewF = new viewFormat();
                 }
                 ?>
                 <?php
-                if (isset($_SESSION['user_unique_id_session']) || isset($_COOKIE['user_unique_id_session'])) {
+                if (isset($_COOKIE['user_unique_id_session'])) {
                     echo '<div class="icon-1">
                     <a href="./chat.php">
                         <button><i class="ri-chat-new-fill"></i><span class="chat-num">+90</span></button>
@@ -332,7 +333,7 @@ $viewF = new viewFormat();
                 }
                 ?>
                 <?php
-                if (isset($_SESSION['user_unique_id_session']) || isset($_COOKIE['user_unique_id_session'])) {
+                if (isset($_COOKIE['user_unique_id_session'])) {
                     echo '<div class="icon-1">
                     <a href="./profile.php"><button><i class="ri-user-add-line"></i></button></a>
                     <label for="">Compte</label>
