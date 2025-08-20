@@ -44,18 +44,18 @@
                 <a href="../">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./profile.php" style="color: #000;"><button><i class="ri-settings-4-line"></i></button></a>
             </div>
         </div>
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
                 <div class="conversation-profile">
-                    <a href="../" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="../" type="name" style="color: #000;"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">Véhicules</h2>
                 </div>
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=voitures">
+                <a href="../categorie-results.php?sous-categorie=voitures" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/vehicles-x3.png" alt="">
                         <div class="det-user">
@@ -66,7 +66,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=bus-et-microbus">
+                <a href="../categorie-results.php?sous-categorie=bus-et-microbus" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/buses-x3.png" alt="">
                         <div class="det-user">
@@ -77,7 +77,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=materiels-lourd">
+                <a href="../categorie-results.php?sous-categorie=materiels-lourd" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/heavy-equipment-x3.png" alt="">
                         <div class="det-user">
@@ -88,7 +88,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=moto-et-scooter">
+                <a href="../categorie-results.php?sous-categorie=moto-et-scooter" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/moto.png" alt="">
                         <div class="det-user">
@@ -99,7 +99,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=camions-et-remorquers">
+                <a href="../categorie-results.php?sous-categorie=camions-et-remorquers" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/trucks-and-trailers-x3.png" alt="">
                         <div class="det-user">
@@ -110,7 +110,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=pieces-et-accesoire-du-vehicule">
+                <a href="../categorie-results.php?sous-categorie=pieces-et-accesoire-du-vehicule" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/vehicle-parts-and-accessories-x3.png" alt="">
                         <div class="det-user">
@@ -121,7 +121,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=motomarine-et-bateau">
+                <a href="../categorie-results.php?sous-categorie=motomarine-et-bateau" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/watercrafts-x3.png" alt="">
                         <div class="det-user">
@@ -132,7 +132,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=service-automobile">
+                <a href="../categorie-results.php?sous-categorie=service-automobile" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/automotive-services-x3.png" alt="">
                         <div class="det-user">

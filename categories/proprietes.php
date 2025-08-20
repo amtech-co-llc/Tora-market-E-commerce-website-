@@ -44,18 +44,18 @@
                 <a href="../">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./profile.php" style="color: #000;"><button><i class="ri-settings-4-line"></i></button></a>
             </div>
         </div>
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
                 <div class="conversation-profile">
-                    <a href="../" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="../" type="name" style="color: #000;"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">Propriétés</h2>
                 </div>
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=nouvelle-construction">
+                <a href="../categorie-results.php?sous-categorie=nouvelle-construction" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/new-builds-x3.png" alt="">
                         <div class="det-user">
@@ -66,7 +66,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=maison-et-appartement-a-louer">
+                <a href="../categorie-results.php?sous-categorie=maison-et-appartement-a-louer" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/houses-and-apartments-for-rent-x3.png" alt="">
                         <div class="det-user">
@@ -77,7 +77,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=maison-et-appartement-a-vendre">
+                <a href="../categorie-results.php?sous-categorie=maison-et-appartement-a-vendre" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/houses-and-apartments-for-sale-x3.png" alt="">
                         <div class="det-user">
@@ -88,7 +88,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=terrains-et-parcelles-a-louer">
+                <a href="../categorie-results.php?sous-categorie=terrains-et-parcelles-a-louer" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/land-for-rent-x3.png" alt="">
                         <div class="det-user">
@@ -99,7 +99,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=terrains-et-parcelles-a-vendre">
+                <a href="../categorie-results.php?sous-categorie=terrains-et-parcelles-a-vendre" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/land-and-plots-for-sale-x3.png" alt="">
                         <div class="det-user">
@@ -112,7 +112,7 @@
                 <!-- beginning of user-card -->
                 <a href="../categorie-results.php?sous-categorie=proprietes-commerciale-a-louer">
                     <div class="user-card">
-                        <img src="../tora icons/commercial-property-for-rent-x3.png" alt="">
+                        <img src="../tora icons/commercial-property-for-rent-x3.png" alt="" class="a-user">
                         <div class="det-user">
                             <h3>Propriété Commerciale à Louer</h3>
                             <p>Tous les catégories</p>
@@ -123,7 +123,7 @@
                 <!-- beginning of user-card -->
                 <a href="../categorie-results.php?sous-categorie=proprietes-commerciale-a-vendre">
                     <div class="user-card">
-                        <img src="../tora icons/commercial-property-for-sale-x3.png" alt="">
+                        <img src="../tora icons/commercial-property-for-sale-x3.png" alt="" class="a-user">
                         <div class="det-user">
                             <h3>Propriété Commerciale à Vendre</h3>
                             <p>Tous les catégories</p>
@@ -132,7 +132,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=centre-et-lieux-devenements">
+                <a href="../categorie-results.php?sous-categorie=centre-et-lieux-devenements" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/event-centers-and-venues-x3.png" alt="">
                         <div class="det-user">
@@ -143,7 +143,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=location-courte">
+                <a href="../categorie-results.php?sous-categorie=location-courte" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/short-let-x3.png" alt="">
                         <div class="det-user">

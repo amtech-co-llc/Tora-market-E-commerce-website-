@@ -9,7 +9,7 @@ $time = new passedTime();
 
 
 $unique_id = htmlspecialchars($_GET['marque']);
-$shareUrl = "Dis moi plus sur ça%20https://market.toracorporation.com/" . $unique_id;
+$shareUrl = "Dis moi plus sur ça%20https://toracorporation.com/" . $unique_id;
 
 $sql = "SELECT * FROM produit WHERE seo_link = ?";
 $query = $pdo->prepare($sql);

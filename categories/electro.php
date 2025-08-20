@@ -44,18 +44,18 @@
                 <a href="../">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./profile.php" style="color: #000;"><button><i class="ri-settings-4-line"></i></button></a>
             </div>
         </div>
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
                 <div class="conversation-profile">
-                    <a href="../" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="../" type="name" style="color: #000;"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">Electronique</h2>
                 </div>
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=accesoire-et-fourniture-pour-electronique">
+                <a href="../categorie-results.php?sous-categorie=accesoire-et-fourniture-pour-electronique" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/accessories-and-supplies-for-electronics-x3.png" alt="">
                         <div class="det-user">
@@ -66,7 +66,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=ordinateurs-et-pc">
+                <a href="../categorie-results.php?sous-categorie=ordinateurs-et-pc" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/laptop.png" alt="">
                         <div class="det-user">
@@ -77,7 +77,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipement-tv-et-dvd">
+                <a href="../categorie-results.php?sous-categorie=equipement-tv-et-dvd" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/tv-x3.png" alt="">
                         <div class="det-user">
@@ -88,7 +88,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipement-audio-et-musique">
+                <a href="../categorie-results.php?sous-categorie=equipement-audio-et-musique" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/audio-x3.png" alt="">
                         <div class="det-user">
@@ -99,7 +99,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=accesoire-informatique">
+                <a href="../categorie-results.php?sous-categorie=accesoire-informatique" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/mice.png" alt="">
                         <div class="det-user">
@@ -110,7 +110,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=materiels-informatique">
+                <a href="../categorie-results.php?sous-categorie=materiels-informatique" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/hard-drive-enclosures.png" alt="">
                         <div class="det-user">
@@ -121,7 +121,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=moniteurs-dordinateur">
+                <a href="../categorie-results.php?sous-categorie=moniteurs-dordinateur" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/computer-monitors-x3.png" alt="">
                         <div class="det-user">
@@ -132,7 +132,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipement-reseau">
+                <a href="../categorie-results.php?sous-categorie=equipement-reseau" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/networking-products-x3.png" alt="">
                         <div class="det-user">
@@ -143,7 +143,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=camera-photo-et-video">
+                <a href="../categorie-results.php?sous-categorie=camera-photo-et-video" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/cameras-x3.png" alt="">
                         <div class="det-user">
@@ -154,7 +154,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=imprimente-et-scanner">
+                <a href="../categorie-results.php?sous-categorie=imprimente-et-scanner" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/printers-and-scanners-x3.png" alt="">
                         <div class="det-user">
@@ -165,7 +165,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=securite-et-surveillance">
+                <a href="../categorie-results.php?sous-categorie=securite-et-surveillance" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/security-and-surveillance-x3.png" alt="">
                         <div class="det-user">
@@ -176,7 +176,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=jeux-video-et-console">
+                <a href="../categorie-results.php?sous-categorie=jeux-video-et-console" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/game-consoles-x3.png" alt="">
                         <div class="det-user">
@@ -187,7 +187,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=logiciels">
+                <a href="../categorie-results.php?sous-categorie=logiciels" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/software-x3.png" alt="">
                         <div class="det-user">

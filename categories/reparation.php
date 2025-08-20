@@ -44,18 +44,18 @@
                 <a href="../">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./profile.php" style="color: #000;"><button><i class="ri-settings-4-line"></i></button></a>
             </div>
         </div>
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
                 <div class="conversation-profile">
-                    <a href="../" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="../" type="name" style="color: #000;"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">Réparation</h2>
                 </div>
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=outils-de-mesure-et-implementation">
+                <a href="../categorie-results.php?sous-categorie=outils-de-mesure-et-implementation" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/measuring-&-layout-tools-x3.png" alt="">
                         <div class="det-user">
@@ -66,7 +66,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=pieces-de-rechanges-pour-telephone-et-tablettes">
+                <a href="../categorie-results.php?sous-categorie=pieces-de-rechanges-pour-telephone-et-tablettes" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/phone-screens.png" alt="">
                         <div class="det-user">

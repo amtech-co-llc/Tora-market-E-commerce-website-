@@ -44,18 +44,18 @@
                 <a href="../">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./profile.php" style="color: #000;"><button><i class="ri-settings-4-line"></i></button></a>
             </div>
         </div>
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
                 <div class="conversation-profile">
-                    <a href="../" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="../" type="name" style="color: #000;"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">Mode & Habillement</h2>
                 </div>
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=sacs">
+                <a href="../categorie-results.php?sous-categorie=sacs" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/tote-bags.png" alt="">
                         <div class="det-user">
@@ -66,7 +66,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=vetements">
+                <a href="../categorie-results.php?sous-categorie=vetements" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/clothing.png" alt="">
                         <div class="det-user">
@@ -77,7 +77,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=vetements-et-accesoires">
+                <a href="../categorie-results.php?sous-categorie=vetements-et-accesoires" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/belts.png" alt="">
                         <div class="det-user">
@@ -88,7 +88,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=bijoux">
+                <a href="../categorie-results.php?sous-categorie=bijoux" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/jewelry-x3.png" alt="">
                         <div class="det-user">
@@ -99,7 +99,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=chaussures">
+                <a href="../categorie-results.php?sous-categorie=chaussures" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/shoes-x3.png" alt="">
                         <div class="det-user">
@@ -110,7 +110,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=vetement-de-mariage">
+                <a href="../categorie-results.php?sous-categorie=vetement-de-mariage" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/wedding wear-x3.png" alt="">
                         <div class="det-user">
@@ -121,7 +121,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=montres">
+                <a href="../categorie-results.php?sous-categorie=montres" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/watches-x3.png" alt="">
                         <div class="det-user">

@@ -44,18 +44,18 @@
                 <a href="../">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./profile.php" style="color: #000;"><button><i class="ri-settings-4-line"></i></button></a>
             </div>
         </div>
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
                 <div class="conversation-profile">
-                    <a href="../" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="../" type="name" style="color: #000;"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">Quincaillerie & Construction</h2>
                 </div>
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=materiaux-de-construction">
+                <a href="../categorie-results.php?sous-categorie=materiaux-de-construction" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/building-materials-x3.png" alt="">
                         <div class="det-user">
@@ -66,7 +66,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=portes">
+                <a href="../categorie-results.php?sous-categorie=portes" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/doors-x3.png" alt="">
                         <div class="det-user">
@@ -77,7 +77,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipements-electrique">
+                <a href="../categorie-results.php?sous-categorie=equipements-electrique" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/electrical-equipment-x3.png" alt="">
                         <div class="det-user">
@@ -88,7 +88,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=outils-electrique">
+                <a href="../categorie-results.php?sous-categorie=outils-electrique" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/electrical-tools-x3.png" alt="">
                         <div class="det-user">
@@ -99,7 +99,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=outils-manuels">
+                <a href="../categorie-results.php?sous-categorie=outils-manuels" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/hand-tools.png" alt="">
                         <div class="det-user">
@@ -110,7 +110,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=plomberie-et-approvisionnement-deau">
+                <a href="../categorie-results.php?sous-categorie=plomberie-et-approvisionnement-deau" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/water-dispensers.png" alt="">
                         <div class="det-user">
@@ -121,7 +121,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=energie-solaire">
+                <a href="../categorie-results.php?sous-categorie=energie-solaire" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/solar-energy-products-x3.png" alt="">
                         <div class="det-user">
@@ -132,7 +132,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=fenetres">
+                <a href="../categorie-results.php?sous-categorie=fenetres" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/windows-x3.png" alt="">
                         <div class="det-user">
@@ -143,7 +143,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=autres-articles-de-reparation-et-construction">
+                <a href="../categorie-results.php?sous-categorie=autres-articles-de-reparation-et-construction" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/other-repair-&-constraction-items-x3.png" alt="">
                         <div class="det-user">

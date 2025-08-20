@@ -44,18 +44,18 @@
                 <a href="../">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./profile.php" style="color: #000;"><button><i class="ri-settings-4-line"></i></button></a>
             </div>
         </div>
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
                 <div class="conversation-profile">
-                    <a href="../" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="../" type="name" style="color: #000;"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">Bébé & Enfants</h2>
                 </div>
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=accesoires-pour-bebe-et-enfant">
+                <a href="../categorie-results.php?sous-categorie=accesoires-pour-bebe-et-enfant" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/babies-and-kids-accessories-x3.png" alt="">
                         <div class="det-user">
@@ -66,7 +66,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=soin-pour-bebe-et-enfant">
+                <a href="../categorie-results.php?sous-categorie=soin-pour-bebe-et-enfant" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/baby-and-child-care-x3.png" alt="">
                         <div class="det-user">
@@ -77,7 +77,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=vetement-pour-enfant">
+                <a href="../categorie-results.php?sous-categorie=vetement-pour-enfant" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/childrens-clothing-x3.png" alt="">
                         <div class="det-user">
@@ -88,7 +88,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=meuble-pour-enfant">
+                <a href="../categorie-results.php?sous-categorie=meuble-pour-enfant" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/childrens-furniture-x3 (1).png" alt="">
                         <div class="det-user">
@@ -99,7 +99,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipement-et-securite-pour-enfant">
+                <a href="../categorie-results.php?sous-categorie=equipement-et-securite-pour-enfant" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/childrens-gear-and-safety-x3.png" alt="">
                         <div class="det-user">
@@ -110,7 +110,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=chaussure-pour-enfant">
+                <a href="../categorie-results.php?sous-categorie=chaussure-pour-enfant" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/childrens-shoes-x3.png" alt="">
                         <div class="det-user">
@@ -121,7 +121,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=maternite-et-grossesse">
+                <a href="../categorie-results.php?sous-categorie=maternite-et-grossesse" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/maternity-and-pregnancy-x3.png" alt="">
                         <div class="det-user">
@@ -132,7 +132,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=landaus-et-poussettes">
+                <a href="../categorie-results.php?sous-categorie=landaus-et-poussettes" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/prams-and-strollers-x3.png" alt="">
                         <div class="det-user">
@@ -143,7 +143,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipement-de-terrain-de-jeux">
+                <a href="../categorie-results.php?sous-categorie=equipement-de-terrain-de-jeux" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/playground-equipment-x3.png" alt="">
                         <div class="det-user">
@@ -154,7 +154,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=jouets">
+                <a href="../categorie-results.php?sous-categorie=jouets" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/toys-x3.png" alt="">
                         <div class="det-user">

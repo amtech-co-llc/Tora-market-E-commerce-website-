@@ -44,18 +44,18 @@
                 <a href="../">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./profile.php" style="color: #000;"><button><i class="ri-settings-4-line"></i></button></a>
             </div>
         </div>
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
                 <div class="conversation-profile">
-                    <a href="../" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="../" type="name" style="color: #000;"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">Equipements</h2>
                 </div>
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=fours-industriels">
+                <a href="../categorie-results.php?sous-categorie=fours-industriels" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/industrial-ovens-x3.png" alt="">
                         <div class="det-user">
@@ -66,7 +66,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipement-de-frabication">
+                <a href="../categorie-results.php?sous-categorie=equipement-de-frabication" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/manufacturing-equipment-x3.png" alt="">
                         <div class="det-user">
@@ -77,7 +77,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=materiaux-et-outils-de-fabrication">
+                <a href="../categorie-results.php?sous-categorie=materiaux-et-outils-de-fabrication" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/manufacturing-materials-and-tools-x3.png" alt="">
                         <div class="det-user">
@@ -88,7 +88,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipement-medicale">
+                <a href="../categorie-results.php?sous-categorie=equipement-medicale" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/medical-equipment-x3.png" alt="">
                         <div class="det-user">
@@ -99,7 +99,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipements-dimpression">
+                <a href="../categorie-results.php?sous-categorie=equipements-dimpression" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/printing-equipment-x3.png" alt="">
                         <div class="det-user">
@@ -110,7 +110,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipements-de-restauration">
+                <a href="../categorie-results.php?sous-categorie=equipements-de-restauration" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/restaurant-and-catering-equipment-x3.png" alt="">
                         <div class="det-user">
@@ -121,7 +121,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipements-de-securite">
+                <a href="../categorie-results.php?sous-categorie=equipements-de-securite" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/safety-equipment-vest-x3.png" alt="">
                         <div class="det-user">
@@ -132,7 +132,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipements-de-salon">
+                <a href="../categorie-results.php?sous-categorie=equipements-de-salon" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/salon-equipment-x3.png" alt="">
                         <div class="det-user">
@@ -143,7 +143,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=eclairage-de-scene-et-effets">
+                <a href="../categorie-results.php?sous-categorie=eclairage-de-scene-et-effets" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/stage-lighting-and-effects-x3.png" alt="">
                         <div class="det-user">
@@ -154,7 +154,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipements-de-magasin">
+                <a href="../categorie-results.php?sous-categorie=equipements-de-magasin" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/store-equipment-x3.png" alt="">
                         <div class="det-user">
@@ -165,7 +165,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=paperterie">
+                <a href="../categorie-results.php?sous-categorie=paperterie" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/stationery-x3.png" alt="">
                         <div class="det-user">

@@ -44,18 +44,18 @@
                 <a href="../">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./profile.php" style="color: #000;"><button><i class="ri-settings-4-line"></i></button></a>
             </div>
         </div>
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
                 <div class="conversation-profile">
-                    <a href="../" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="../" type="name" style="color: #000;"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">Santé & Beauté</h2>
                 </div>
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=bain-et-corps">
+                <a href="../categorie-results.php?sous-categorie=bain-et-corps" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/health-x3.png" alt="">
                         <div class="det-user">
@@ -66,7 +66,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=parfums">
+                <a href="../categorie-results.php?sous-categorie=parfums" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/fragrance-x3.png" alt="">
                         <div class="det-user">
@@ -77,7 +77,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=beaute-de-cheveux">
+                <a href="../categorie-results.php?sous-categorie=beaute-de-cheveux" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/hair-beauty-x3.png" alt="">
                         <div class="det-user">
@@ -88,7 +88,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=maquillages">
+                <a href="../categorie-results.php?sous-categorie=maquillages" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/makeup-x3.png" alt="">
                         <div class="det-user">
@@ -99,7 +99,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=soin-dela-peau">
+                <a href="../categorie-results.php?sous-categorie=soin-dela-peau" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/skin-care-x3.png" alt="">
                         <div class="det-user">
@@ -110,7 +110,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=outils-et-accesoires">
+                <a href="../categorie-results.php?sous-categorie=outils-et-accesoires" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/tools-and-accessories-x3.png" alt="">
                         <div class="det-user">
@@ -121,7 +121,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=vitamines-et-supplements">
+                <a href="../categorie-results.php?sous-categorie=vitamines-et-supplements" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/vitamins-and-supplements-x3.png" alt="">
                         <div class="det-user">

@@ -44,18 +44,18 @@
                 <a href="../">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./profile.php" style="color: #000;"><button><i class="ri-settings-4-line"></i></button></a>
             </div>
         </div>
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
                 <div class="conversation-profile">
-                    <a href="../" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="../" type="name" style="color: #000;"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">Meubles & Electroménagere</h2>
                 </div>
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=meubles">
+                <a href="../categorie-results.php?sous-categorie=meubles" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/home-x3.png" alt="">
                         <div class="det-user">
@@ -66,7 +66,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=fourniture-de-jardin">
+                <a href="../categorie-results.php?sous-categorie=fourniture-de-jardin" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/garden-x3.png" alt="">
                         <div class="det-user">
@@ -79,7 +79,7 @@
                 <!-- beginning of user-card -->
                 <a href="../categorie-results.php?sous-categorie=accesoire-de-maison">
                     <div class="user-card">
-                        <img src="../tora icons/home-accessories-x3.png" alt="">
+                        <img src="../tora icons/home-accessories-x3.png" alt="" class="a-user">
                         <div class="det-user">
                             <h3>Accesoires de maison</h3>
                             <p>tout les Accesoires</p>
@@ -88,7 +88,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=appareil-menagers">
+                <a href="../categorie-results.php?sous-categorie=appareil-menagers" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/home-appliances-x3.png" alt="">
                         <div class="det-user">
@@ -99,7 +99,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=appareil-de-cuisine">
+                <a href="../categorie-results.php?sous-categorie=appareil-de-cuisine" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/kitchen-appliances-x3.png" alt="">
                         <div class="det-user">
@@ -110,7 +110,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=cuisine-et-salle-a-manger">
+                <a href="../categorie-results.php?sous-categorie=cuisine-et-salle-a-manger" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/kitchen-and-dining-x3.png" alt="">
                         <div class="det-user">
@@ -121,7 +121,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=produit-chimique-menagers">
+                <a href="../categorie-results.php?sous-categorie=produit-chimique-menagers" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/household-chemicals-x3.png" alt="">
                         <div class="det-user">

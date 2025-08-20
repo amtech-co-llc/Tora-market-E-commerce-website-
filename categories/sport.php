@@ -44,18 +44,18 @@
                 <a href="../">
                     <h3>Tora corporation</h3>
                 </a>
-                <a href="./profile.php"><button><i class="ri-settings-4-line"></i></button></a>
+                <a href="./profile.php" style="color: #000;"><button><i class="ri-settings-4-line"></i></button></a>
             </div>
         </div>
         <!-- end of navigation bar -->
         <div class="chat-card-user-list">
             <div class="users-card">
                 <div class="conversation-profile">
-                    <a href="../" type="name"><i class="ri-arrow-left-fill"></i></a>
+                    <a href="../" type="name" style="color: #000;"><i class="ri-arrow-left-fill"></i></a>
                     <h2 style="text-align: center;">Art, Sport & Plein Air</h2>
                 </div>
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=art-et-bricalage">
+                <a href="../categorie-results.php?sous-categorie=art-et-bricalage" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/arts-x3.png" alt="">
                         <div class="det-user">
@@ -66,7 +66,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=livres-et-jeux">
+                <a href="../categorie-results.php?sous-categorie=livres-et-jeux" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/books-x3.png" alt="">
                         <div class="det-user">
@@ -77,7 +77,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipement-de-camping">
+                <a href="../categorie-results.php?sous-categorie=equipement-de-camping" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/camping-x3.png" alt="">
                         <div class="det-user">
@@ -88,7 +88,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=cd-et-dvd">
+                <a href="../categorie-results.php?sous-categorie=cd-et-dvd" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/cds-and-dvds-x3.png" alt="">
                         <div class="det-user">
@@ -99,7 +99,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=instruments-musicaux-et-equipements">
+                <a href="../categorie-results.php?sous-categorie=instruments-musicaux-et-equipements" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/musical-instruments-and-gear-x3.png" alt="">
                         <div class="det-user">
@@ -110,7 +110,7 @@
                 </a>
                 <!-- end of user-card -->
                 <!-- beginning of user-card -->
-                <a href="../categorie-results.php?sous-categorie=equipement-sportif">
+                <a href="../categorie-results.php?sous-categorie=equipement-sportif" class="a-user">
                     <div class="user-card">
                         <img src="../tora icons/sports-equipment-x3.png" alt="">
                         <div class="det-user">
